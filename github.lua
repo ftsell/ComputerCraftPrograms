@@ -1,3 +1,13 @@
+local completion = require("cc.shell.completion")
+
+shell.setCompletionFunction(fs.getName(shell.getRunningProgram()), completion.build(
+        { completion.choice, { "get", "run" } },
+        nil,
+        nil,
+        nil,
+        completion.file
+))
+
 local function printUsage()
     local programName = arg[0] or fs.getName(shell.getRunningProgram())
     print("Usages:")
