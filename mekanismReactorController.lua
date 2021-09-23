@@ -105,7 +105,7 @@ end
 defineSettings()
 while true do
     term.clear()
-    term.setCursorPos(0, 0)
+    term.setCursorPos(1, 1)
     printSettings()
     print()
     print()
