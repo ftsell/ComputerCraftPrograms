@@ -117,7 +117,10 @@ while true do
         print("Turning reactor off to prevent damage")
         setReactorState(false)
     else
-        if not isFuelInsufficient() then
+        if isFuelInsufficient() then
+            print("Turning reactor off because there is no fuel")
+            setReactorState(false)
+        else
             print("Turning reactor on")
             setReactorState(true)
         end
